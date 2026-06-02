@@ -3,14 +3,9 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static final ThemeData customtheme = ThemeData(
     colorScheme: ColorScheme.dark(
-      primary: Color(0xffA6FF00),
-      surface: Color(0xff0F0F0F),
-      secondary: Color(0xff1A1A1A),
-      tertiary: Color(0xffAAAAAA),
-      onTertiary: Color(0xff5d891b),
-      scrim: Color(0xffffffff),
-      onPrimary: Color(0xffbbf47b),
-      onSecondary: Color(0xffA6FF00),
+      primary: Color(0xffFEFEFE),
+      tertiary: Color(0xffEBEBEA),
+      secondary: Color(0xff000101),
     ),
     textTheme: TextTheme(
       displayLarge: TextStyle(
