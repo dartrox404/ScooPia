@@ -74,7 +74,7 @@ class OnboardingPage extends StatelessWidget {
                       },
                       child: Center(
                         child: Text(
-                          'Get Started >>>',
+                          'Get Started',
                           style: context.text.bodyMedium?.copyWith(
                             fontFamily: 'poppins',
                           ),
