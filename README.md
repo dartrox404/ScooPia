@@ -9,8 +9,7 @@
 
 **A beautifully crafted Flutter food ordering app with smooth animations and modern UI**
 
-[Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [Folder Structure](#-folder-structure) • [Screenshots](#-screenshots)
-
+![ui](assets/images/875shots_so.png)
 </div>
 
 ---
