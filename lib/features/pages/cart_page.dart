@@ -1,6 +1,8 @@
 import 'package:action_slider/action_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
 import 'package:scoopia/core/const/app_sizes.dart';
 import 'package:scoopia/core/extensions/app_extensions.dart';
 import 'package:scoopia/data/model/product.dart';
@@ -90,6 +92,26 @@ class CartPage extends StatelessWidget {
                           ),
                         ),
                         ActionSlider.standard(
+                          action: (controller) async {
+                            controller.loading();
+                            await Future.delayed(const Duration(seconds: 1));
+                            controller.success();
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                Future.delayed(const Duration(seconds: 2), () {
+                                  // ignore: use_build_context_synchronously
+                                  context.pop();
+                                });
+                                return Lottie.asset(
+                                  'assets/lootie/Check Mark.json',
+                                  repeat: false,
+                                  height: 100,
+                                );
+                              },
+                            );
+                            controller.reset();
+                          },
                           width: 200,
                           height: 40,
                           toggleColor: context.color.primary,
@@ -98,16 +120,19 @@ class CartPage extends StatelessWidget {
                             size: AppSizes.kiconXl,
                             color: context.color.secondary,
                           ),
-                          child: Text(
-                            'Buy Now',
-                            style: context.text.bodyLarge?.copyWith(
-                              fontFamily: 'poppins',
-                              color: context.color.primary,
+                          child: Center(
+                            child: Text(
+                              'Buy Now',
+                              style: context.text.bodyLarge?.copyWith(
+                                fontFamily: 'poppins',
+                                color: context.color.primary,
+                              ),
                             ),
                           ),
                         ),
                       ],
                     ),
+                    const Gap(AppSizes.kspace10),
                   ],
                 ),
               ),
